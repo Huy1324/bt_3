@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		#myTable {
+		  font-family: Arial, Helvetica, sans-serif;
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+
+		#myTable td, #myTable th {
+		  border: 1px solid #ddd;
+		  padding: 8px;
+		}
+
+		#myTable tr:nth-child(even){background-color: #f2f2f2;}
+
+		#myTable tr:hover {background-color: #ddd;}
+
+		#myTable th {
+		  padding-top: 12px;
+		  padding-bottom: 12px;
+		  text-align: left;
+		  background-color: #04AA6D;
+		  color: white;
+		}
+		</style>
+	<title></title>
+</head>
+<body onload="count_variable()">
+	<form>
+		<h1>5 anh em siu nhân thiếu 1</h1>
+		<select id="drop1" onclick="get_selection()">
+			<option>Nguyễn Tý Đô</option>
+			<option>Nguyễn Phú Quý</option>
+			<option>Nguyễn Minh Nhật</option>
+			<option>Dương Trần Phương Huy</option>
+		</select>
+		<p id="p1"></p>
+		<h1 id="c1"></h1>
+		<img id="img1" src="soi.jfif" width="150px" height="150px">
+				
+
+		<!-- hiển thị thông tin -->
+		<table id="myTable">
+		  <tr>
+		    <td>Họ tên</td>
+		    <td>Sói Đầu Đàn</td>
+		  </tr>
+		  <tr>
+		    <td>Ngành</td>
+		    <td>KTĐK & TĐH</td>
+		  </tr>
+		  <tr>
+		    <td>Khoa</td>
+		    <td>Tự động hóa</td>
+		  </tr>
+		  <tr>
+		  	<td>Nghề Nghiệp</td>
+		  	<td>Siu nhân </td>
+		  </tr>
+		</table>
+	</form>
+	<script type="text/javascript">
+		function count_variable(){count=0}
+		function get_selection(){
+
+			// var count
+			// console.log(count++)
+			document.getElementById("c1").innerHTML=count++;
+			i1 = document.getElementById("p1");
+			l1 = document.getElementById("drop1").options;
+			idx = l1.selectedIndex;
+			// console.log(idx);
+			
+			if (idx == 0){
+				document.getElementById("img1").src="bao.jpg"
+				// i1.innerHTML = "Bạn vừa chọn trưởng nhóm: "+ l1[0].innerHTML;
+				var table = document.getElementById("myTable");
+				// hien thị bảng thông tin
+				document.getElementById("myTable").deleteRow(0);
+				document.getElementById("myTable").deleteRow(0);
+				document.getElementById("myTable").deleteRow(0);
+			  var row = table.insertRow(0);
+			  var cell1 = row.insertCell(0);
+			  var cell2 = row.insertCell(1);
+			  cell1.innerHTML = "Khoa";
+			  cell2.innerHTML = "Tự động hóa";
+			  
+			  row = table.insertRow(0);            
+			  cell1 = row.insertCell(0);
+			  cell2 = row.insertCell(1);
+
+			  cell1.innerHTML = "Ngành";
+			  cell2.innerHTML = "KTĐK & TĐH";
+			  
+			  row = table.insertRow(0);
+			  cell1 = row.insertCell(0);
+			  cell2 = row.insertCell(1);
+			  cell1.innerHTML = "Họ tên";
+			  cell2.innerHTML = "Nguyễn Tý Đô";
+
+			}else if (idx == 1){
+				document.getElementById("img1").src="quy.jpg"
+				var table = document.getElementById("myTable");
+				// hien thị bảng thông tin
+				document.getElementById("myTable").deleteRow(0);
+				document.getElementById("myTable").deleteRow(0);
+				document.getElementById("myTable").deleteRow(0);
+			  var row = table.insertRow(0);
+			  var cell1 = row.insertCell(0);
+			  var cell2 = row.insertCell(1);
+			  cell1.innerHTML = "Khoa";
+			  cell2.innerHTML = "Tự động hóa";
+			  
+			  row = table.insertRow(0);            
+			  cell1 = row.insertCell(0);
+			  cell2 = row.insertCell(1);
+
+			  cell1.innerHTML = "Ngành";
+			  cell2.innerHTML = "KTĐK & TĐH";
+			  
+			  row = table.insertRow(0);
+			  cell1 = row.insertCell(0);
+			  cell2 = row.insertCell(1);
+			  cell1.innerHTML = "Họ tên";
+			  cell2.innerHTML = "Nguyễn Phú Quý";
+			}else if (idx == 2){
+				document.getElementById("img1").src="nhat.jpg"
+				var table = document.getElementById("myTable");
+				document.getElementById("myTable").deleteRow(0);
+				document.getElementById("myTable").deleteRow(0);
+				document.getElementById("myTable").deleteRow(0);
+			  var row = table.insertRow(0);
+			  var cell1 = row.insertCell(0);
+			  var cell2 = row.insertCell(1);
+			  cell1.innerHTML = "Khoa";
+			  cell2.innerHTML = "Tự Động Hóa";
+			  
+			  row = table.insertRow(0);            
+			  cell1 = row.insertCell(0);
+			  cell2 = row.insertCell(1);
+
+			  cell1.innerHTML = "Ngành";
+			  cell2.innerHTML = "KTĐK & TĐH";
+			  
+			  row = table.insertRow(0);
+			  cell1 = row.insertCell(0);
+			  cell2 = row.insertCell(1);
+			  cell1.innerHTML = "Họ tên";
+			  cell2.innerHTML = "Nguyễn Minh Nhật";
+			}else{
+				document.getElementById("img1").src="body.jpg"
+				var table = document.getElementById("myTable");
+				document.getElementById("myTable").deleteRow(0);
+				document.getElementById("myTable").deleteRow(0);
+				document.getElementById("myTable").deleteRow(0);
+			  var row = table.insertRow(0);
+			  var cell1 = row.insertCell(0);
+			  var cell2 = row.insertCell(1);
+			  cell1.innerHTML = "Khoa";
+			  cell2.innerHTML = "Tự Động Hóa";
+			  
+			  row = table.insertRow(0);            
+			  cell1 = row.insertCell(0);
+			  cell2 = row.insertCell(1);
+
+			  cell1.innerHTML = "Ngành";
+			  cell2.innerHTML = "KTĐK & TĐH";
+			  
+			  row = table.insertRow(0);
+			  cell1 = row.insertCell(0);
+			  cell2 = row.insertCell(1);
+			  cell1.innerHTML = "Họ tên";
+			  cell2.innerHTML = "Dương trần Phương Huy";
+			}
+
+		}
+	</script>
+</body>
+</html>
